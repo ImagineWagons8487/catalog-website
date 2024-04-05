@@ -28,6 +28,20 @@ const FRESH_PRINCE_URL = "https://upload.wikimedia.org/wikipedia/en/3/33/Fresh_P
 const CURB_POSTER_URL = "https://m.media-amazon.com/images/M/MV5BZDY1ZGM4OGItMWMyNS00MDAyLWE2Y2MtZTFhMTU0MGI5ZDFlXkEyXkFqcGdeQXVyMDc5ODIzMw@@._V1_FMjpg_UX1000_.jpg";
 const EAST_LOS_HIGH_POSTER_URL = "https://static.wikia.nocookie.net/hulu/images/6/64/East_Los_High.jpg";
 
+const imgs = [
+    FRESH_PRINCE_URL, CURB_POSTER_URL, EAST_LOS_HIGH_POSTER_URL
+];
+
+ const items = new Map();
+ items.set("0", [FRESH_PRINCE_URL, "https://en.wikipedia.org/wiki/The_Fresh_Prince_of_Bel-Air"]);
+ items.set("1", [CURB_POSTER_URL, "https://en.wikipedia.org/wiki/Curb_Your_Enthusiasm"]);
+ items.set("2", [EAST_LOS_HIGH_POSTER_URL, "https://en.wikipedia.org/wiki/East_Los_High"]);
+ 
+function getRandomInt(max)
+{
+    return Math.floor(Math.random() * max);
+}
+
 // This is an array of strings (TV show titles)
 let titles = [
     "Fresh Prince of Bel Air",
@@ -50,13 +64,7 @@ function showCards() {
         // This part of the code doesn't scale very well! After you add your
         // own data, you'll need to do something totally different here.
         let imageURL = "";
-        if (i == 0) {
-            imageURL = FRESH_PRINCE_URL;
-        } else if (i == 1) {
-            imageURL = CURB_POSTER_URL;
-        } else if (i == 2) {
-            imageURL = EAST_LOS_HIGH_POSTER_URL;
-        }
+        imageURL = imgs[i];
 
         const nextCard = templateCard.cloneNode(true); // Copy the template card
         editCardContent(nextCard, title, imageURL); // Edit title and image
@@ -84,11 +92,31 @@ function editCardContent(card, newTitle, newImageURL) {
 document.addEventListener("DOMContentLoaded", showCards);
 
 function quoteAlert() {
-    console.log("Button Clicked!")
-    alert("I guess I can kiss heaven goodbye, because it got to be a sin to look this good!");
+    console.log("Button Clicked!");
+    // alert("ye");
+    switch(getRandomInt(3))
+    {
+        case 0:
+            alert("I guess I can kiss heaven goodbye, because it got to be a sin to look this good!");
+            break;
+        case 1:
+            alert("When in doubt, look intelligent.");
+            break;
+        case 2:
+            alert("Spread love wherever you go.");
+            break;
+        default:
+            alert("bleh");
+    }
 }
 
 function removeLastCard() {
     titles.pop(); // Remove last item in titles array
     showCards(); // Call showCards again to refresh
+}
+
+function sendToWiki(){
+    console.log("Image Clicked")
+
+      
 }

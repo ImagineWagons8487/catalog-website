@@ -59,7 +59,6 @@ const imgs = [
     "Game Thumbnails\\Monster Hunter World.jpg",
     "Game Thumbnails\\Mortal Kombat.jpg",
     "Game Thumbnails\\Palworld.jpg",
-    "Game Thumbnails\\War Thunder.jpg",
     "Game Thumbnails\\Rust.jpg",
     "Game Thumbnails\\Shovel Knight.jpg",
     "Game Thumbnails\\Sims 4.jpg",
@@ -67,6 +66,7 @@ const imgs = [
     "Game Thumbnails\\Stardew Valley.jpg",
     "Game Thumbnails\\Street fighter.jpg",
     "Game Thumbnails\\Tekken.jpg",
+    "Game Thumbnails\\War Thunder.jpg",
     "Game Thumbnails\\Witcher.jpg",
 ];
 const titles = [
@@ -74,7 +74,7 @@ const titles = [
     "Destiny 2", "Dragon Dogma II", "Elden Ring", "Fallout 4", "God of War",
     "Grand Theft Auto V", "Hollow Knight", "Horizon Forbidden West", 
     "Monster Hunter World", "Mortal Kombat 1", "Palworld",
-    "Rust", "Shovel Knight", "Sims 4", "Skyrim", "Stardew Valley", "Street Figher 6",
+    "Rust", "Shovel Knight", "Sims 4", "Skyrim", "Stardew Valley", "Street Fighter 6",
     "Tekken 7", "War Thunder", "The Witcher 3"
 ];
 
@@ -89,7 +89,7 @@ let games = [
     [titles[7], imgs[7], 19.99, "RPG", "FPS"],
     [titles[8], imgs[8], 49.99, "Action", "Adventure"],
     [titles[9], imgs[9], 39.99, "Action", "Adventure"],
-    [titles[10], imgs[9], 14.99, "Platformer", "Adventure"],
+    [titles[10], imgs[10], 14.99, "Platformer", "Adventure"],
     [titles[11], imgs[11], 59.99, "Action", "RPG"],
     [titles[12], imgs[12], 29.99, "Action", "RPG"],
     [titles[13], imgs[13], 69.99, "Action", "Fighting"],

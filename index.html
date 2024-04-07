@@ -2,38 +2,52 @@
 <html>
 
 <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles">
+    <title>Game Catalog | Home</title>
+    <meta name="description" content="A Catalog of Games from Various Genres">
     <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="scripts.js"></script>
 </head>
 
 <body>
     <header class="main-header">
-        <h1 class="title">LA TV Shows</h1>
+        <div class="titleBox">
+            <h1 class="title">Game Catalog</h1>
+        </div>
     </header>
+    <!-- <input type="text" id="searchInput" placeholder="Search..."> -->
+    <div id = "genreList">
+        <h1>Genres</h1>
+        <ul id="genre-container">
+
+        </ul>
+    </div>
+    <li class="genre" onclick="">  </li>
     <div id="card-container">
         
     </div>
     <div class="card" style="display: none;">
         <div class="card-content">
-            <h2 class="tvShowTitle">TV Show Title</h2>
-            <img src="" alt="TV Show Poster" onclick = "sendToWiki();">
-            <ul class="bulletPoints">
-                <li>Bullet Point 1</li>
-                <li>Bullet Point 2</li>
-                <li>Bullet Point 3</li>
+            <h2 class="gameTitle">Game Title</h2>
+            <a class="imgLink" href="">
+                <img src="" alt="Game Thumbnail">
+            </a>
+            <ul class="Info">
+                <li id="price">$ Price</li>
+                <li id="genre1">Genre 1</li> 
+                <li id="genre2">, Genre 2</li>
             </ul>
         </div>
     </div>
     <div class="footer">
-        <button onclick="quoteAlert();">
+        <!-- <button onclick="quoteAlert();">
             Get A Quote!
         </button>
         <button onclick="removeLastCard();">
             Remove A Card!
         </button>
+        <button onclick="addCard();">
+            Add a Card!
+        </button> -->
     </div>
 </body>
-
+<script type="text/javascript" src="scripts.js"></script>
 </html>

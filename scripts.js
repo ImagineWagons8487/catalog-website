@@ -28,7 +28,7 @@
 
 function displayGenres() {
     const genreContainer = document.getElementById("genre-container");
-    genreContainer.textContent = "";
+    genreContainer.textContent = ""; // sets text to nothing
     const templateGenre = document.querySelector(".genre");
 
     for(let i=0; i<genreStrings.length; i++)
@@ -73,7 +73,7 @@ function sortByGenre(genre) {
     if(genre == "Reset Genre Sort"){
         card.style.display = 'block';
     }
-    else if(cardGenre1 == genre || cardGenre2.substring(2) == genre){
+    else if(cardGenre1 == genre || cardGenre2 == genre){
         card.style.display = 'block';
     }
     else {
@@ -87,6 +87,7 @@ function setCardDisplay(card)
 {
     let cardGenre1 = card.querySelector("#genre1");
     let cardGenre2 = card.querySelector("#genre2");
+
     if(cardGenre1 == genre || cardGenre2 == genre){
         card.style.display = 'block';
     }
@@ -134,7 +135,7 @@ function editCardContent(card, newTitle, newImageURL, price, genre1, genre2) {
     cardGenre1.textContent = genre1;
 
     const cardGenre2 = card.querySelector("#genre2");
-    cardGenre2.textContent = ", " + genre2;
+    cardGenre2.textContent = genre2;
 
 }
 

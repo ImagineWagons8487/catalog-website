@@ -58,13 +58,13 @@ body {
     transition: 400ms;
 }
 #searchInput{
+    position: relative;
     width: 15em;
     height: 2em;
     border-radius: 5px;
     border: 0px;
     box-shadow: 5px, 5px, 5px, rgb(109, 73, 217);
     background-color: rgb(117, 225, 255);
-    position: relative;
     left: -275px;
 }
 #genreList{
@@ -100,7 +100,6 @@ body {
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
-    margin-left: 100px;
     left: 80px;
     justify-content: left;
     margin: 20px;
@@ -118,13 +117,14 @@ body {
 }
 
 .card:hover{
-    box-shadow: 5px 10px 10px rgba(255, 255, 255, 0.493);
+    box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.493);
     filter: brightness(1.15);
     transform: scale(1.1);
 }
 
 .card-content {
     padding: 20px;
+    padding-bottom: 0px;
     font-family: "serif";
     color: #777;
     font-size: 20px;
@@ -132,41 +132,62 @@ body {
 .Info{
     white-space: nowrap;
 }
-#price{
-    display: inline-block;
+#genres{
+    display:flex;
     position: relative;
-    border-radius: 10px;
-    left: -40px;
-    top: -20px;
-    font-size: 30px;
-    background-color: rgb(20, 75, 20);
-    list-style-type: none;
-    color: rgb(115, 255, 50);
-    padding-left: 5px;
-    padding-right: 5px;
-}
+    justify-content: left;
+    transform: translate(-20%, -50%);
+;}
 #genre1{
     position:relative;
-    left: -115px;
-    top: 30px;
+    /* left: -115px;
+    top: 30px; */
     margin-left: -20px;
     display: inline-block;
     padding-left: 8px;
     border-top-left-radius: 10px;
-    /* background-color:rgb(17, 74, 90); */
-    color:rgb(157, 234, 255);
+    background-color:rgb(151, 195, 207);
+    color:rgb(3, 15, 19);
+    border-radius: 10px;
+    padding-right: 10px;
 }
 #genre2{
     position:relative;
-    left: -115px;
-    top: 30px;
-    margin-left: -5px;
+    /* left: -110px;
+    top: 30px; */
+    margin-left: 8px;
     display: inline-block;
     padding-right: 8px;
     border-bottom-right-radius: 10px;
-    /* background-color:rgb(17, 74, 90); */
-    color:rgb(157, 234, 255);
+    background-color:rgb(151, 195, 207);
+    color:rgb(3, 15, 19);
+    border-radius: 10px;
+    padding-left: 10px;
 }
+#dividingLine{
+    margin: 0;
+    transform: translateX(-15%);
+    width: 124%;
+}
+#price{
+    float: right;
+    position: relative;
+    margin-bottom: 0;
+    border-radius: 10px;
+    font-size: 35px;
+    /* background-color: rgb(151, 207, 160); */
+    list-style-type: none;
+    color: rgb(197, 197, 197);
+    font-family: Impact, fantasy;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    justify-self: right;
+    /* transform: translate(200% ,30%); */
+}
+
 .gameTitle{
     margin-top: 0;
     color:rgb(157, 234, 255);
@@ -177,6 +198,7 @@ body {
     width: 100%;
     height: 100%;
     cursor: pointer;
+    margin-bottom: 0px;
 }
 
 .footer {

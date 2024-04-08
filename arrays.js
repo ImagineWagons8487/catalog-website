@@ -1,8 +1,10 @@
+//array of genre strings for the genre list
 const genreStrings = [
     "Reset Genre Sort", "Action", "Platformer", "Fighting", 
     "FPS", "RPG", "Simulation", "Adventure", "Survival"
 ]
 
+//array of thumbnails for the cards
 const imgs = [
     "Game Thumbnails\\Ark Survival Ascended.jpg", 
     "Game Thumbnails\\Call of Duty.jpg", 
@@ -29,6 +31,8 @@ const imgs = [
     "Game Thumbnails\\War Thunder.jpg",
     "Game Thumbnails\\Witcher.jpg",
 ];
+
+//array of the titles for the cards
 const titles = [
     "Ark Survival Ascended", "Call of Duty", "Celeste", "Counter Strike 2",
     "Destiny 2", "Dragon Dogma II", "Elden Ring", "Fallout 4", "God of War",
@@ -38,6 +42,7 @@ const titles = [
     "Tekken 7", "War Thunder", "The Witcher 3"
 ];
 
+//2D array | each value is an array that represents all the attributes of the cards
 let games = [
     [titles[0], imgs[0], 44.99, "Survival", "Adventure"],
     [titles[1], imgs[1], 69.99, "FPS", "Action"],

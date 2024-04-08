@@ -9,18 +9,19 @@
 
 <body>
     <header class="main-header">
+        <!-- <img id="logo" src="Logo\Logo.png" alt="logo"> -->
         <div class="titleBox">
-            <h1 class="title">Game Catalog</h1>
+            <h1 class="title">GAME CATALOG</h1>
         </div>
     </header>
-    <!-- <input type="text" id="searchInput" placeholder="Search..."> -->
+    <input type="text" id="searchInput" placeholder="Search...">
     <div id = "genreList">
         <h1>Genres</h1>
         <ul id="genre-container">
 
         </ul>
     </div>
-    <li class="genre" onclick="">  </li>
+    <li class="genre" onclick="sortByGenre(this.textContent)">  </li>
     <div id="card-container">
         
     </div>
@@ -49,5 +50,6 @@
         </button> -->
     </div>
 </body>
+<script type="text/javascript" src="arrays.js"></script>
 <script type="text/javascript" src="scripts.js"></script>
 </html>

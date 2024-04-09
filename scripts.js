@@ -102,22 +102,25 @@ function showCards() {
     cardContainer.innerHTML = "";
     const templateCard = document.querySelector(".card");
     
-    for (let i = 0; i < games.length; i++) {
-        let title = games[i][0];
-        let imageURL = games[i][1];
-        let price = games[i][2];
-        let genre1 = games[i][3];
-        let genre2 = games[i][4];
+    for (let i = 0; i < games.cards.length; i++) {
+        let title = games.cards[i].title;
+        let imageURL = games.cards[i].imgPath;
+        let price = games.cards[i].price;
+        let genre1 = games.cards[i].genre1;
+        let genre2 = games.cards[i].genre2;
 
         const nextCard = templateCard.cloneNode(true); // Copy the template card
         editCardContent(nextCard, title, imageURL, price, genre1, genre2); // Edit attributes
         cardContainer.appendChild(nextCard); // Add new card to the container
+        nextCard.addEventListener('click', ()=>{
+            window.location.href = `page.html?title=${title}&imgURL=${imageURL}&price=${price}&genre1=${genre1}&genre2=${genre2}`;;
+        })
     }
 }
 
 function editCardContent(card, newTitle, newImageURL, price, genre1, genre2) {
     card.style.display = "block";
-
+    //card.href = `page.html?title=${newTitle}&imgURL=${newImageURL}&price=${price}&genre1=${genre1}&genre2=${genre2}`;
     const cardHeader = card.querySelector(".gameTitle");
     cardHeader.textContent = newTitle;
 

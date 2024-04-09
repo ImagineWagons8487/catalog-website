@@ -4,68 +4,175 @@ const genreStrings = [
     "FPS", "RPG", "Simulation", "Adventure", "Survival"
 ]
 
-//array of thumbnails for the cards
-const imgs = [
-    "Game Thumbnails\\Ark Survival Ascended.jpg", 
-    "Game Thumbnails\\Call of Duty.jpg", 
-    "Game Thumbnails\\Celeste.jpg",
-    "Game Thumbnails\\Counter Strike.jpg",
-    "Game Thumbnails\\Destiny 2.jpg",
-    "Game Thumbnails\\Dragons Dogma.jpg",
-    "Game Thumbnails\\Elden Ring.jpg",
-    "Game Thumbnails\\Fallout 4.jpg",
-    "Game Thumbnails\\God of War.jpg",
-    "Game Thumbnails\\GTAV.jpg",
-    "Game Thumbnails\\Hollow Knight.jpg",
-    "Game Thumbnails\\Horizon Forbidden West.jpg",
-    "Game Thumbnails\\Monster Hunter World.jpg",
-    "Game Thumbnails\\Mortal Kombat.jpg",
-    "Game Thumbnails\\Palworld.jpg",
-    "Game Thumbnails\\Rust.jpg",
-    "Game Thumbnails\\Shovel Knight.jpg",
-    "Game Thumbnails\\Sims 4.jpg",
-    "Game Thumbnails\\Skyrim.jpg",
-    "Game Thumbnails\\Stardew Valley.jpg",
-    "Game Thumbnails\\Street fighter.jpg",
-    "Game Thumbnails\\Tekken.jpg",
-    "Game Thumbnails\\War Thunder.jpg",
-    "Game Thumbnails\\Witcher.jpg",
-];
-
-//array of the titles for the cards
-const titles = [
-    "Ark Survival Ascended", "Call of Duty", "Celeste", "Counter Strike 2",
-    "Destiny 2", "Dragon Dogma II", "Elden Ring", "Fallout 4", "God of War",
-    "Grand Theft Auto V", "Hollow Knight", "Horizon Forbidden West", 
-    "Monster Hunter World", "Mortal Kombat 1", "Palworld",
-    "Rust", "Shovel Knight", "Sims 4", "Skyrim", "Stardew Valley", "Street Fighter 6",
-    "Tekken 7", "War Thunder", "The Witcher 3"
-];
-
-//2D array | each value is an array that represents all the attributes of the cards
-let games = [
-    [titles[0], imgs[0], 44.99, "Survival", "Adventure"],
-    [titles[1], imgs[1], 69.99, "FPS", "Action"],
-    [titles[2], imgs[2], 19.99, "Platformer", "Adventure"],
-    [titles[3], imgs[3], "FREE", "FPS", "Action"],
-    [titles[4], imgs[4], "FREE", "FPS", "RPG"],
-    [titles[5], imgs[5], 69.99, "Action", "RPG"],
-    [titles[6], imgs[6], 59.99, "Action", "RPG"],
-    [titles[7], imgs[7], 19.99, "RPG", "FPS"],
-    [titles[8], imgs[8], 49.99, "Action", "Adventure"],
-    [titles[9], imgs[9], 39.99, "Action", "Adventure"],
-    [titles[10], imgs[10], 14.99, "Platformer", "Adventure"],
-    [titles[11], imgs[11], 59.99, "Action", "RPG"],
-    [titles[12], imgs[12], 29.99, "Action", "RPG"],
-    [titles[13], imgs[13], 69.99, "Action", "Fighting"],
-    [titles[14], imgs[14], 29.99, "Survival", "Adventure"],
-    [titles[15], imgs[15], 39.99, "Survival", "Adventure"],
-    [titles[16], imgs[16], 39.99, "Platformer", "Adventure"],
-    [titles[17], imgs[17], "FREE", "Simulation", "Adventure"],
-    [titles[18], imgs[18], 39.99, "Adventure", "RPG"],
-    [titles[19], imgs[19], 14.99, "Simulation", "RPG"],
-    [titles[20], imgs[20], 59.99, "Fighting", "Action"],
-    [titles[21], imgs[21], 39.99, "Fighting", "Action"],
-    [titles[22], imgs[22], "FREE", "Simulation", "Action"],
-    [titles[23], imgs[23], 39.99, "Adventure", "RPG"] 
-];
+const games = {
+    cards: [
+        {
+            title: "Ark Survival Ascended",
+            imgPath: "Game Thumbnails\\Ark Survival Ascended.jpg",
+            price: 44.99,
+            genre1: "Survival",
+            genre2: "Adventure"
+        },
+        {
+            title: "Call of Duty",
+            imgPath: "Game Thumbnails\\Call of Duty.jpg",
+            price: 69.99,
+            genre1: "FPS",
+            genre2: "Action"
+        },
+        {
+            title: "Celeste",
+            imgPath: "Game Thumbnails\\Celeste.jpg",
+            price: 19.99,
+            genre1: "Platformer",
+            genre2: "Adventure"
+        },
+        {
+            title: "Counter Strike 2",
+            imgPath: "Game Thumbnails\\Counter Strike.jpg",
+            price: "FREE",
+            genre1: "FPS",
+            genre2: "Action"
+        },
+        {
+            title: "Destiny 2",
+            imgPath: "Game Thumbnails\\Destiny 2.jpg",
+            price: "FREE",
+            genre1: "FPS",
+            genre2: "RPG"
+        },
+        {
+            title: "Dragon Dogma II",
+            imgPath: "Game Thumbnails\\Dragons Dogma.jpg",
+            price: 69.99,
+            genre1: "Action",
+            genre2: "RPG"
+        },
+        {
+            title: "Elden Ring",
+            imgPath: "Game Thumbnails\\Elden Ring.jpg",
+            price: 59.99,
+            genre1: "Action",
+            genre2: "RPG"
+        },
+        {
+            title: "Fallout 4",
+            imgPath: "Game Thumbnails\\Fallout 4.jpg",
+            price: 19.99,
+            genre1: "RPG",
+            genre2: "FPS"
+        },
+        {
+            title: "God of War",
+            imgPath: "Game Thumbnails\\God of War.jpg",
+            price: 49.99,
+            genre1: "Action",
+            genre2: "Adventure"
+        },
+        {
+            title: "Grand Theft Auto V",
+            imgPath: "Game Thumbnails\\GTAV.jpg",
+            price: 39.99,
+            genre1: "Action",
+            genre2: "Adventure"
+        },
+        {
+            title: "Hollow Knight",
+            imgPath: "Game Thumbnails\\Hollow Knight.jpg",
+            price: 14.99,
+            genre1: "Platformer",
+            genre2: "Adventure"
+        },
+        {
+            title: "Horizon Forbidden West",
+            imgPath: "Game Thumbnails\\Horizon Forbidden West.jpg",
+            price: 59.99,
+            genre1: "Action",
+            genre2: "RPG"
+        },
+        {
+            title: "Monster Hunter World",
+            imgPath: "Game Thumbnails\\Monster Hunter World.jpg",
+            price: 29.99,
+            genre1: "Action",
+            genre2: "RPG"
+        },
+        {
+            title: "Mortal Kombat 1",
+            imgPath: "Game Thumbnails\\Mortal Kombat.jpg",
+            price: 69.99,
+            genre1: "Action",
+            genre2: "Fighting"
+        },
+        {
+            title: "Palworld",
+            imgPath: "Game Thumbnails\\Palworld.jpg",
+            price: 29.99,
+            genre1: "Survival",
+            genre2: "Adventure"
+        },
+        {
+            title: "Rust",
+            imgPath: "Game Thumbnails\\Rust.jpg",
+            price: 39.99,
+            genre1: "Survival",
+            genre2: "Adventure"
+        },
+        {
+            title: "Shovel Knight",
+            imgPath: "Game Thumbnails\\Shovel Knight.jpg",
+            price: 39.99,
+            genre1: "Platformer",
+            genre2: "Adventure"
+        },
+        {
+            title: "Sims 4",
+            imgPath: "Game Thumbnails\\Sims 4.jpg",
+            price: "FREE",
+            genre1: "Simulation",
+            genre2: "Adventure"
+        },
+        {
+            title: "Skyrim",
+            imgPath: "Game Thumbnails\\Skyrim.jpg",
+            price: 39.99,
+            genre1: "Adventure",
+            genre2: "RPG"
+        },
+        {
+            title: "Stardew Valley",
+            imgPath: "Game Thumbnails\\Stardew Valley.jpg",
+            price: 14.99,
+            genre1: "Simulation",
+            genre2: "RPG"
+        },
+        {
+            title: "Street Fighter 6",
+            imgPath: "Game Thumbnails\\Street fighter.jpg",
+            price: 59.99,
+            genre1: "Fighting",
+            genre2: "Action"
+        },
+        {
+            title: "Tekken 7",
+            imgPath: "Game Thumbnails\\Tekken.jpg",
+            price: 39.99,
+            genre1: "Fighting",
+            genre2: "Action"
+        },
+        {
+            title: "War Thunder",
+            imgPath: "Game Thumbnails\\War Thunder.jpg",
+            price: "FREE",
+            genre1: "Simulation",
+            genre2: "Action"
+        },
+        {
+            title: "The Witcher 3",
+            imgPath: "Game Thumbnails\\Witcher.jpg",
+            price: 39.99,
+            genre1: "Adventure",
+            genre2: "RPG"
+        }
+    ]
+}

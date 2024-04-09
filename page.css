@@ -1,13 +1,13 @@
 html,
 body {
     margin: 0;
-    padding: 0;
-    background-color:rgb(7, 33, 41);
+    background-color:rgb(3, 16, 20);
 }
 
 .main-header {
+    padding:0;
     display: flex;
-    background-color: rgba(0, 0, 0, .3);
+    background-color: rgb(3, 16, 20);
     padding-bottom: 10px;
     transform-origin: center top;
     transition: 400ms;
@@ -44,6 +44,93 @@ body {
     font-size: 1em;
     font-family: "Gill Sans", sans-serif;
     font-weight: bolder;
-    color: rgb((157, 234, 255));
+    color:rgb(157, 234, 255);
     transition: 400ms;
+}
+#gameInfo{
+    transform: translateX(8vw);
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    width: 80vw;
+    height: 88vh;
+    background-color:rgb(7, 33, 41);
+}
+
+#gameTitle{
+    /* display: inline; */
+    position:relative;
+    font-size: 4vw;
+    color: rgb(157, 234, 255);
+    top: 2vh;
+    
+}
+#gameImg{
+    margin-top: 0;
+    border-radius:10px;
+    width: 40vw;
+    float: right;
+}
+#genres{
+    float: right;
+    display: flex;
+    font-size: 3vw;
+    clear:right;
+    margin-top: 3vh;
+}
+
+#genre1{
+    display: inline-block;
+    background-color:rgb(151,195,207);
+    border-radius:30px;
+    padding-left: .5em;
+    padding-right: .5em;
+    margin-right: .5vw;
+}
+
+#genre2{
+    display: inline-block;
+    background-color:rgb(151,195,207);
+    border-radius: 30px;
+    padding-left: .5em;
+    padding-right: .5em;
+    margin-left: .5vw;
+}
+@keyframes glow{
+    from {text-shadow: 0px 0px 50px green};
+    to {text-shadow: 0px 0px 40px green};
+}
+#price{
+    float:right;
+    clear:right;
+    display: block;
+    font-size: 6vw;
+    font-family: Impact, fantasy;
+    color:rgb(197, 197, 197);
+    /* animation-name: glow;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in; */
+}
+#developer{
+    list-style-type: none;
+    font-size: 1.8vw;
+    color:rgb(157, 234, 255);
+    margin-bottom: 5vh;
+    line-height: 1.5em;
+}
+#developer:before{
+    content: "Developers: "
+}
+#description{
+    display:inline-block;
+    position:absolute;
+    padding: 1%;
+    width: 35vw;
+    font-size: 2.4vw;
+    background-color:rgb(0, 70, 89);
+    border-radius:10px;
+    color:rgb(157, 234, 255);
+    margin-top:-2vh;
+    line-height: 1.3em;
 }

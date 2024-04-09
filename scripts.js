@@ -83,19 +83,6 @@ function sortByGenre(genre) {
 
 }
 
-function setCardDisplay(card)
-{
-    let cardGenre1 = card.querySelector("#genre1");
-    let cardGenre2 = card.querySelector("#genre2");
-
-    if(cardGenre1 == genre || cardGenre2 == genre){
-        card.style.display = 'block';
-    }
-    else {
-        card.style.display = 'none';
-    }
-}
-
 // This function adds cards the page to display the data in the array
 function showCards() {
     const cardContainer = document.getElementById("card-container");
@@ -108,19 +95,20 @@ function showCards() {
         let price = games.cards[i].price;
         let genre1 = games.cards[i].genre1;
         let genre2 = games.cards[i].genre2;
-
+        let dev = games.cards[i].developer;
+        let desc = games.cards[i].desc;
         const nextCard = templateCard.cloneNode(true); // Copy the template card
         editCardContent(nextCard, title, imageURL, price, genre1, genre2); // Edit attributes
         cardContainer.appendChild(nextCard); // Add new card to the container
         nextCard.addEventListener('click', ()=>{
-            window.location.href = `page.html?title=${title}&imgURL=${imageURL}&price=${price}&genre1=${genre1}&genre2=${genre2}`;;
+            window.location.href = `page.html?title=${title}&imgURL=${imageURL}&price=${price}&genre1=${genre1}&genre2=${genre2}&dev=${dev}&desc=${desc}`;
         })
     }
 }
 
 function editCardContent(card, newTitle, newImageURL, price, genre1, genre2) {
     card.style.display = "block";
-    //card.href = `page.html?title=${newTitle}&imgURL=${newImageURL}&price=${price}&genre1=${genre1}&genre2=${genre2}`;
+    
     const cardHeader = card.querySelector(".gameTitle");
     cardHeader.textContent = newTitle;
 
@@ -145,34 +133,3 @@ function editCardContent(card, newTitle, newImageURL, price, genre1, genre2) {
 // This calls the showCards() and displayGenres functions when the page is first loaded
 document.addEventListener("DOMContentLoaded", showCards);
 document.addEventListener("DOMContentLoaded", displayGenres);
-
-// function quoteAlert() {
-//     console.log("Button Clicked!");
-//     // alert("ye");
-//     switch(getRandomInt(3))
-//     {
-//         case 0:
-//             alert("I guess I can kiss heaven goodbye, because it got to be a sin to look this good!");
-//             break;
-//         case 1:
-//             alert("When in doubt, look intelligent.");
-//             break;
-//         case 2:
-//             alert("Spread love wherever you go.");
-//             break;
-//         default:
-//             alert("nah");
-//     }
-// }
-
-// function removeLastCard() {
-//     games.pop(); // Remove last item in titles array
-//     showCards(); // Call showCards again to refresh
-// }
-// function addCard()
-// {
-//     showCards();
-// }
-// function sendToWiki(){
-//     console.log("Image Clicked");
-// }

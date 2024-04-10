@@ -47,12 +47,11 @@ document.getElementById('searchInput').addEventListener('input',
 function(event){
 
     const searchTerm = event.target.value.toLowerCase();
-    const cardsList = document.querySelectorAll('#card-container div');
+    const cardsList = document.querySelectorAll('#card-container .card');
 
     cardsList.forEach(
         function(card){
         const cardTitle = card.querySelector(".gameTitle").textContent.toLowerCase();
-        
         if (cardTitle.includes(searchTerm)){
             card.style.display = 'block';
         }
@@ -70,7 +69,7 @@ function sortByGenre(genre) {
         let cardGenre1 = card.querySelector("#genre1").textContent;
         let cardGenre2 = card.querySelector("#genre2").textContent;
 
-    if(genre == "Reset Genre Sort"){
+    if(genre == "reset"){
         card.style.display = 'block';
     }
     else if(cardGenre1 == genre || cardGenre2 == genre){

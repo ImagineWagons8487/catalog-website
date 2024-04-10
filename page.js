@@ -13,6 +13,10 @@ document.querySelector(".titleBox").addEventListener('click', ()=>{
     window.location.href = `index.html`;
 })
 
+// document.querySelector("#price").addEventListener('click', ()=>{
+//     document.querySelector("#price").textContent = "Thank you for your purchase!";
+// })
+
 function parseURLS(){
     document.querySelector("#tabTitle").textContent += gameTitle;
 
@@ -28,7 +32,6 @@ function parseURLS(){
     else
         document.querySelector("#price").textContent = "$" + gamePrice;
 }
-
 document.addEventListener("DOMContentLoaded", parseURLS());
 
 //make look professional, treat like clients, commercial use, don't make personal

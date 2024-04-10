@@ -1,6 +1,6 @@
 //array of genre strings for the genre list
 const genreStrings = [
-    "Reset Genre Sort", "Action", "Platformer", "Fighting", 
+    "Action", "Platformer", "Fighting", 
     "FPS", "RPG", "Simulation", "Adventure", "Survival"
 ]
 

@@ -21,7 +21,6 @@ body {
     background-color: rgb(0, 70, 89);
     color: rgb(41, 210, 255);
     border-radius: 30px;
-    font-size: 5.5vw;
     font-family: "serif";
     cursor: default;
     border-style: none;
@@ -41,7 +40,7 @@ body {
 .title {
     text-align: center;
     margin-top: 10px;
-    font-size: 1em;
+    font-size: 5em;
     font-family: "Gill Sans", sans-serif;
     font-weight: bolder;
     color: rgb(41, 210, 255);

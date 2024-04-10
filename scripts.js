@@ -62,7 +62,6 @@ function(event){
     });
 
 function sortByGenre(genre) {
-
     const cardsList = document.querySelectorAll('#card-container .card');
     cardsList.forEach(
         function(card){
